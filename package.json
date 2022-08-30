@@ -1,8 +1,8 @@
 {
-  "name": "scratch-paint",
-  "version": "0.2.0",
+  "name": "braceletmaker-paint",
+  "version": "1.2.0",
   "description": "Graphical User Interface for the Scratch 3.0 paint editor, which is used to make and edit sprites for use in projects.",
-  "main": "./dist/scratch-paint.js",
+  "main": "./dist/braceletmaker-paint.js",
   "browser": "./src/index.js",
   "scripts": {
     "build": "npm run clean && webpack --progress --colors --bail",
@@ -17,12 +17,12 @@
     "unit": "jest --reporters=default",
     "watch": "webpack --progress --colors --watch"
   },
-  "author": "Massachusetts Institute of Technology",
+  "author": "Haptic Synaptic",
   "license": "BSD-3-Clause",
-  "homepage": "https://github.com/LLK/scratch-paint#readme",
+  "homepage": "https://github.com/HapticSynaptic/braceletmaker-paint#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/LLK/scratch-paint.git"
+    "url": "https://github.com/HapticSynaptic/braceletmaker-paint.git"
   },
   "dependencies": {
     "@scratch/paper": "0.11.20200728195508",

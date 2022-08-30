@@ -108,7 +108,7 @@ module.exports = [
             'redux': 'redux'
         },
         entry: {
-            'scratch-paint': './src/index.js'
+            'braceletmaker-paint': './src/index.js'
         },
         output: {
             path: path.resolve(__dirname, 'dist'),
