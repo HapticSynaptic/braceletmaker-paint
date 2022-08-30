@@ -298,7 +298,7 @@ const _makeBackgroundGuideLayer = function (format) {
     const vBackground = _makeBackgroundPaper(
         MAX_WORKSPACE_BOUNDS.width / CHECKERBOARD_SIZE,
         (MAX_WORKSPACE_BOUNDS.height / CHECKERBOARD_SIZE) + 1,
-        '#D9E3F2', 0.55);
+        '#884dff26', 0.55);
     vBackground.position = CENTER;
     vBackground.scaling = new paper.Point(CHECKERBOARD_SIZE, CHECKERBOARD_SIZE);
 

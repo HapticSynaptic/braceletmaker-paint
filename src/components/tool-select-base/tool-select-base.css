@@ -10,7 +10,6 @@ $border-radius: .25rem;
     border-radius: $border-radius;
     outline: none;
     background: none;
-    padding: $grid-unit;
     font-size: 0.85rem;
     transition: 0.2s;
 }

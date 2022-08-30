@@ -5,6 +5,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    column-gap: 2rem;
 }
 
 .costume-input {
@@ -130,4 +131,38 @@ $border-radius: 0.25rem;
 [dir="rtl"] .menu-item-icon {
     margin-right: 0;
     margin-left: calc(2 * $grid-unit);
+}
+
+.colorRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.mod-labeled-icon-height {
+    height: 2.85rem; /* for the second row so the dashed borders are equal in size */
+}
+
+[dir="ltr"] .mod-margin-after {
+    margin-right: calc(2 * $grid-unit);
+}
+
+[dir="rtl"] .mod-margin-after {
+    margin-left: calc(2 * $grid-unit);
+}
+
+
+.select-label {
+    font-size: 0.625rem;
+    user-select: none;
+    cursor: default;
+    font-weight: bold;
+}
+
+[dir="ltr"] .select-label {
+    margin-right: calc(-2rem + 2 * $grid-unit);
+}
+
+[dir="rtl"] .select-label {
+    margin-left: calc(-2rem + 2 * $grid-unit);
 }

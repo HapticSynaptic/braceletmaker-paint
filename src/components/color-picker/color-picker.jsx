@@ -6,19 +6,11 @@ import classNames from 'classnames';
 import parseColor from 'parse-color';
 
 import Slider, {CONTAINER_WIDTH, HANDLE_WIDTH} from '../forms/slider.jsx';
-import LabeledIconButton from '../labeled-icon-button/labeled-icon-button.jsx';
 import styles from './color-picker.css';
 import GradientTypes from '../../lib/gradient-types';
-import {MIXED} from '../../helper/style-path';
 
 import eyeDropperIcon from './icons/eye-dropper.svg';
 import noFillIcon from '../color-button/no-fill.svg';
-import mixedFillIcon from '../color-button/mixed-fill.svg';
-import fillHorzGradientIcon from './icons/fill-horz-gradient-enabled.svg';
-import fillRadialIcon from './icons/fill-radial-enabled.svg';
-import fillSolidIcon from './icons/fill-solid-enabled.svg';
-import fillVertGradientIcon from './icons/fill-vert-gradient-enabled.svg';
-import swapIcon from './icons/swap.svg';
 import Modes from '../../lib/modes';
 
 const hsvToHex = (h, s, v) =>
@@ -71,123 +63,6 @@ class ColorPickerComponent extends React.Component {
                 className={styles.colorPickerContainer}
                 dir={this.props.rtl ? 'rtl' : 'ltr'}
             >
-                {this.props.shouldShowGradientTools ? (
-                    <div>
-                        <div className={styles.row}>
-                            <div className={styles.gradientPickerRow}>
-                                <img
-                                    className={classNames({
-                                        [styles.inactiveGradient]: this.props.gradientType !== GradientTypes.SOLID,
-                                        [styles.clickable]: true
-                                    })}
-                                    draggable={false}
-                                    src={fillSolidIcon}
-                                    onClick={this.props.onChangeGradientTypeSolid}
-                                />
-                                <img
-                                    className={classNames({
-                                        [styles.inactiveGradient]:
-                                            this.props.gradientType !== GradientTypes.HORIZONTAL,
-                                        [styles.clickable]: true
-                                    })}
-                                    draggable={false}
-                                    src={fillHorzGradientIcon}
-                                    onClick={this.props.onChangeGradientTypeHorizontal}
-                                />
-                                <img
-                                    className={classNames({
-                                        [styles.inactiveGradient]: this.props.gradientType !== GradientTypes.VERTICAL,
-                                        [styles.clickable]: true
-                                    })}
-                                    draggable={false}
-                                    src={fillVertGradientIcon}
-                                    onClick={this.props.onChangeGradientTypeVertical}
-                                />
-                                <img
-                                    className={classNames({
-                                        [styles.inactiveGradient]: this.props.gradientType !== GradientTypes.RADIAL,
-                                        [styles.clickable]: true
-                                    })}
-                                    draggable={false}
-                                    src={fillRadialIcon}
-                                    onClick={this.props.onChangeGradientTypeRadial}
-                                />
-                            </div>
-                        </div>
-                        <div className={styles.divider} />
-                        {this.props.gradientType === GradientTypes.SOLID ? null : (
-                            <div className={styles.row}>
-                                <div
-                                    className={classNames(
-                                        styles.gradientPickerRow,
-                                        styles.gradientSwatchesRow
-                                    )}
-                                >
-                                    <div
-                                        className={classNames({
-                                            [styles.clickable]: true,
-                                            [styles.swatch]: true,
-                                            [styles.largeSwatch]: true,
-                                            [styles.activeSwatch]: this.props.colorIndex === 0
-                                        })}
-                                        style={{
-                                            backgroundColor: this.props.color === null || this.props.color === MIXED ?
-                                                'white' : this.props.color
-                                        }}
-                                        onClick={this.props.onSelectColor}
-                                    >
-                                        {this.props.color === null ? (
-                                            <img
-                                                className={styles.largeSwatchIcon}
-                                                draggable={false}
-                                                src={noFillIcon}
-                                            />
-                                        ) : this.props.color === MIXED ? (
-                                            <img
-                                                className={styles.largeSwatchIcon}
-                                                draggable={false}
-                                                src={mixedFillIcon}
-                                            />
-                                        ) : null}
-                                    </div>
-                                    <LabeledIconButton
-                                        className={styles.swapButton}
-                                        imgSrc={swapIcon}
-                                        title={this.props.intl.formatMessage(messages.swap)}
-                                        onClick={this.props.onSwap}
-                                    />
-                                    <div
-                                        className={classNames({
-                                            [styles.clickable]: true,
-                                            [styles.swatch]: true,
-                                            [styles.largeSwatch]: true,
-                                            [styles.activeSwatch]: this.props.colorIndex === 1
-                                        })}
-                                        style={{
-                                            backgroundColor: this.props.color2 === null || this.props.color2 === MIXED ?
-                                                'white' : this.props.color2
-                                        }}
-                                        onClick={this.props.onSelectColor2}
-                                    >
-                                        {this.props.color2 === null ? (
-                                            <img
-                                                className={styles.largeSwatchIcon}
-                                                draggable={false}
-                                                src={noFillIcon}
-                                            />
-                                        ) : this.props.color2 === MIXED ? (
-                                            <img
-                                                className={styles.largeSwatchIcon}
-                                                draggable={false}
-                                                src={mixedFillIcon}
-                                            />
-                                        ) : null}
-                                    </div>
-                                </div>
-                            </div>
-                        )}
-                    </div>
-                ) : null}
                 <div className={styles.row}>
                     <div className={styles.rowHeader}>
                         <span className={styles.labelName}>
