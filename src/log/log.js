@@ -1,4 +1,4 @@
 import minilog from 'minilog';
 minilog.enable();
 
-export default minilog('braceletmaker-paint');
+export default minilog('@hapticsynaptic/braceletmaker-paint');

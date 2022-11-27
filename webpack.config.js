@@ -108,7 +108,7 @@ module.exports = [
             'redux': 'redux'
         },
         entry: {
-            'braceletmaker-paint': './src/index.js'
+            '@hapticsynaptic/braceletmaker-paint': './src/index.js'
         },
         output: {
             path: path.resolve(__dirname, 'dist'),
