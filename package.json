@@ -1,6 +1,6 @@
 {
   "name": "@hapticsynaptic/braceletmaker-paint",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "Graphical User Interface for the Scratch 3.0 paint editor, which is used to make and edit sprites for use in projects.",
   "main": "./dist/braceletmaker-paint.js",
   "browser": "./src/index.js",
